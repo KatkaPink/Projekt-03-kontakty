@@ -8,3 +8,24 @@ body {
 }
 
 /* ---------------------------------------------------- */
+
+h1 {
+	text-align: center;
+}
+
+.tym {
+	display: flex;
+}
+
+.osoba {
+	border: 1px solid lightblue;
+	border-radius: 5px;
+	margin: 5px;
+	padding: 5px;
+	text-align: center;
+}
+
+.foto img {
+	border-radius: 50%;
+}
+
