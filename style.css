@@ -20,12 +20,67 @@ h1 {
 .osoba {
 	border: 1px solid lightblue;
 	border-radius: 5px;
-	margin: 5px;
+	margin: 10px;
 	padding: 5px;
 	text-align: center;
+	display: flex;
 }
 
 .foto img {
 	border-radius: 50%;
+	text-align: center;
 }
 
+
+@media (max-width: 540px) {
+	.tym { 
+		flex-direction: column;
+		width: 100%;
+		}
+	.osoba {
+		flex-direction: column;
+	}
+}
+
+@media (min-width: 540px) and (max-width: 960px) {
+	/* 
+	POKUSY  - rozložení pro TABLET
+		flex: 1 1 50%;
+		float: left;
+		flex-basis: auto;
+		
+	nezvládla jse zarovnat fotku v .osoba nad popis, ani udělat rozložení do dvou sloupců
+		*/
+	.tym {
+		flex-direction: row;
+		flex-wrap: wrap;
+		flex-basis: 50%;
+	}	
+	.osoba {
+		flex-direction: row;
+		flex-wrap: wrap;
+		width: 50%;
+		float: left;
+		flex-grow: 1;
+		flex-shrink: 1;	
+	}
+	.foto {
+		flex-direction: column;
+		width: 50%;
+		float: left;
+	}
+}
+
+@media (min-width:960px) {
+	.tym {
+		flex-direction: row;
+		flex-grow: 1;
+		flex-shrink: 1;
+		
+	}
+
+	.osoba {
+		flex-direction: column;
+		width: 25%;
+	}
+}
